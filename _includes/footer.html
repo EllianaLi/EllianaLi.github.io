@@ -12,9 +12,11 @@
     <time>{{ 'now' | date: '%Y' }}</time>
 
     {% if site.social.links %}
-      <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
+    <a href="{{ site.social.links[0].url }}">
+      <i class="{{ site.social.links[0].icon }}"></i> {{ site.social.name }}
+    </a>.
     {% else %}
-      <em class="fst-normal">{{ site.social.name }}</em>.
+    <em class="fst-normal">{{ site.social.name }}</em>.
     {% endif %}
 
     {% if site.data.locales[include.lang].copyright.brief %}
@@ -28,22 +30,22 @@
     {% endif %}
   </p>
 
-  <p>
-    {%- capture _platform -%}
-      <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
-    {%- endcapture -%}
+<!--  <p>-->
+<!--    {%- capture _platform -%}-->
+<!--      <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>-->
+<!--    {%- endcapture -%}-->
 
-    {%- capture _theme -%}
-      <a
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title="v{{ theme.version }}"
-        href="https://github.com/cotes2020/jekyll-theme-chirpy"
-        target="_blank"
-        rel="noopener"
-      >Chirpy</a>
-    {%- endcapture -%}
+<!--    {%- capture _theme -%}-->
+<!--      <a-->
+<!--        data-bs-toggle="tooltip"-->
+<!--        data-bs-placement="top"-->
+<!--        title="v{{ theme.version }}"-->
+<!--        href="https://github.com/cotes2020/jekyll-theme-chirpy"-->
+<!--        target="_blank"-->
+<!--        rel="noopener"-->
+<!--      >Chirpy</a>-->
+<!--    {%- endcapture -%}-->
 
-    {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
-  </p>
+<!--    {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}-->
+<!--  </p>-->
 </footer>
