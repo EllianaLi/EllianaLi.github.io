@@ -75,7 +75,7 @@ script_includes:
                 {% unless forloop.last %}{{ '</em>, <em>' }}{% endunless %}
               {% endfor %}
             {% else %}
-              <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
+              <a href="{{site.social.links[0] }}">{{ site.social.name }}</a>
             {% endif %}
           </em>
         </span>
@@ -160,15 +160,15 @@ script_includes:
       "
     >
       <div class="license-wrapper">
-        {% if site.data.locales[lang].copyright.license.link and site.data.locales[lang].copyright.license.template %}
-        {% capture _replacement %}
-        <a href="{{ site.data.locales[lang].copyright.license.link }}">
-          {{ site.data.locales[lang].copyright.license.name }}
-        </a>
-        {% endcapture %}
+          {% if site.data.locales[lang].copyright.license.template %}
+          {% capture _replacement %}
+          <a href="{{ site.data.locales[lang].copyright.license.link }}">
+              {{ site.data.locales[lang].copyright.license.name }}
+          </a>
+          {% endcapture %}
 
-        {{ site.data.locales[lang].copyright.license.template | replace: ':LICENSE_NAME', _replacement }}
-        {% endif %}
+          {{ site.data.locales[lang].copyright.license.template | replace: ':LICENSE_NAME', _replacement }}
+          {% endif %}
       </div>
 
       {% include post-sharing.html lang=lang %}
