@@ -19,27 +19,27 @@ title: Elliana Li # the main title
 tagline: M.Eng in Financial Engineering @ Cornell # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Welcome to my personal website! Here I share my projects, blogs, and research in quantitative finance, data science, and algorithmic trading.
+  Welcome to my personal website! You know you love me ! 
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: ""
 
 github:
-  username: dwuuuuuuu # change to your GitHub username
+  username: EllianaLi # change to your GitHub username
 
 #twitter:
 #  username: twitter_username # change to your Twitter username
 
 social:
-  name: Di Wu
-  email: im.dwuu@gmail.com
+  name: EllianaLi
+  email: bl3134@nyu.edu
   links:
 #    - title: GitHub
-#      url: https://github.com/dwuuuuuuu
+#      url: https://github.com/EllianaLi
 #      icon: "fab fa-github"
 #    - title: LinkedIn
-#      url: https://www.linkedin.com/in/di-wu-a248ab2b8/
+#      url: www.linkedin.com/in/binxili020703
 #      icon: "fab fa-linkedin"
 
 
