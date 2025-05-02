@@ -10,8 +10,8 @@ order: 4
 
 I'm a Financial Engineering master's student at Cornell, passionate about quantitative research, trading strategy, and turning complex data into actionable insights 📈✨.
 
-- 💻 I code in Python (`Pandas`, `scikit-learn`, `XGBoost`, `PyTorch`)  
-- 📊 I develop trading signals using order book & alternative data  
+- 💻 I code in Python (`Pandas`, `scikit-learn`, `XGBoost`, `PyTorch`) , SQL, R, Matlab, Julia
+- 📊 I develop trading signals using order book & alternative data 
 - 🧠 I explore ML & RL applications in financial markets  
 - ✍️ I also share ideas and lifestyle on Xiaohongshu — 6K+ curious minds follow along!
 
