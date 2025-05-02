@@ -1,8 +1,8 @@
 ---
-title: "Reference and Pointer in C++"
+title: "Execution Algorithms: A Real-Time ML Approach"
 date: 2025-04-19 10:00:00 +0800
-author: dwuuuuuuu
-categories: [Programming]
+author: EllianaLi
+categories: [Trading]
 pin: true
 tags: [test, c++]
 ---
