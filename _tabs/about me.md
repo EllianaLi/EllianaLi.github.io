@@ -6,65 +6,30 @@ order: 4
 ---
 
 
-## 🎓 **Education**
+## 👋 Hi there, I'm Elliana!
 
-<div class="card">
-  <div class="card-body" style="line-height: 1.8;">
+I'm a Financial Engineering master's student at Cornell, passionate about quantitative research, trading strategy, and turning complex data into actionable insights 📈✨.
 
-    <p>
-      <a href="https://www.cornell.edu/" target="_blank" rel="noopener">
-      <strong>Cornell University</strong></a><strong>, College of Engineering</strong>, Ithaca, NY
-      <span style="float: right;">Aug. 2024 – May 2025</span><br>
-      <em>Master of Engineering in Financial Engineering</em>, GPA: 4.2/4.3<br><br>
-      <strong>Selected Courses:</strong> Big Data Technology
-    </p>
+- 💻 I code in Python (`Pandas`, `scikit-learn`, `XGBoost`, `PyTorch`)  
+- 📊 I develop trading signals using order book & alternative data  
+- 🧠 I explore ML & RL applications in financial markets  
+- ✍️ I also share ideas and lifestyle on Xiaohongshu — 6K+ curious minds follow along!
 
-    <hr>
+---
 
-    <p>
-      <a href="https://www.sustech.edu.cn/en/" target="_blank" rel="noopener">
-      <strong>Southern University of Science and Technology</strong></a>, Shenzhen, China
-      <span style="float: right;">Aug. 2019 – Jun. 2023</span><br>
-      <em>Bachelor of Economics in Financial Engineering</em>, GPA: 3.79/4.0<br><br>
-      <strong>Selected Courses:</strong> ...
-    </p>
+### 🧩 Current Research Interests
 
-  </div>
-</div>
+- Fixed income products and interest rate modeling  
+- Sentiment analysis and NLP for market signals  
+- Portfolio optimization with real-world constraints  
 
+---
 
+### 🌟 Fun Facts
 
-## 💼 **Work Experience**
+- 🎾 Tennis enthusiast (2.5 level — my backhand is a work in progress!)  
+- 🎷 Jazz music is my coding fuel
+- 📺 I secretly think Blair Waldorf would've made a great quant (Gossip Girl is my guilty pleasure)
+- 🔮 I dabble in tarot reading when I need a sign from the universe  
 
-<div class="card">
-  <div class="card-body" style="line-height: 1.8;">
-
-    <p>
-      <strong>SGD Capital Management</strong>, Shenzhen, China
-      <span style="float: right;">Aug. 2023 – Apr. 2024</span><br>
-      <em>Quantitative Trading Intern</em>
-    </p>
-
-    <hr>
-
-    <p>
-      <strong>Jinrui Futures</strong>, Shenzhen, China
-      <span style="float: right;">Aug. 2022 – Oct. 2022</span><br>
-      <em>Quantitative Trading Intern</em>
-    </p>
-
-  </div>
-</div>
-
-## 😆 **Others**
-
-<div class="card">
-  <div class="card-body" style="line-height: 1.8;">
-    <ul>
-      <li><strong>Programming:</strong> Python; Java; C++; C#; SQL</li>
-      <li><strong>Languages:</strong> Mandarin (Native); English (Fluent)</li>
-      <li><strong>Interests:</strong> Piano; Music; Video game</li>
-    </ul>
-  </div>
-</div>
-
+> Let’s connect and collaborate on all things data + finance + design — or just chat about Serena’s plot twists and saxophone solos!
