@@ -10,63 +10,67 @@ tags: [test, c++]
 This blog is for testing.
 
 ---
-##### > Difference between reference and pointer.
+> A milestone write-up on real-time execution modeling using limit order book features and dynamic thresholding.  
+> 🧠 Written by Binxi Li, Sirui Zhang, and Sheng Zhang @ Cornell Financial Engineering (Spring 2025)
 
-* **Reference**: Declared with the **&** symbol.
+---
 
-  ```c++
-  int a = 10;
-  int &ref = a; 
-  ```
+## 📘 Project Overview
 
-* **Pointer**: Declared with the **\*** symbol.
+In this project, we built a **real-time execution algorithm** to decide when to buy (or sell) one share per minute using limit order book (LOB) and message flow data.
 
-  ```c++
-  int a = 10;
-  int *ptr = &a;  // ptr holds the address of a
-  ```
+We combined **market microstructure intuition** with **machine learning classifiers**, and designed fallback mechanisms to **guarantee exactly one trade per minute**. Our primary goal: achieve better prices than a TWAP benchmark by exploiting order-level features.
 
-  **note**: "&" in c++: 1. Reference declaration; 2. Address-of operator -> retrieves the memory address of a variable; 3. Bitwise AND operator
+---
 
-|                | Reference (alias)                                | Pointer                                               |
-| -------------- | ------------------------------------------------ | ----------------------------------------------------- |
-| Initialization | Must be initialized immediately                  | Can bu initialized later or even be uninitialized     |
-| Immutability   | Can NOT be changed                               | Can be re-assigned                                    |
-| Memory Address | Do not have separate memeory address for storing | Store the memory address of the variable it points to |
-| Nullability    | Cannot be null                                   | Can hold a nullptr                                    |
+## 🧮 Features from LOB
 
-1. ###### Which is safer? Which is faster?
+We engineered several per-tick features to drive our model decisions:
 
-   Reference is safer (immutable) and faster (access the variable directly. Pointer store the address, so we need to dereference to get the value)
+- **Spread**: ask − bid (proxy for transaction cost)
+- **Order Imbalance**: `(bid_volume - ask_volume)/(bid_volume + ask_volume)`
+- **Momentum**: 5-tick change in mid-price
+- **VWAP**: Size-weighted average trade price (last 10 orders)
+- **Execution Intensity**: Rolling count of recent execution messages
+- **Order Direction Mean**: Smoothed sentiment signal from buyer/seller tags
+- **Time Pressure**: Scaled seconds-in-minute (0 at start, 1 at 59s)
 
-2. ###### Benefits of reference?
+These features help capture microstructural patterns like urgency, trend, and liquidity.
 
-    * Improve readability
-    * Calling by reference in function argument -> avoid copy large data; can modify the original variable
-    * Return a reference -> avoid copy
+---
 
-3. ###### When do we use reference in C++?
+## 🧠 Model Logic
 
-    * **Function parameter passing**: When you want to avoid copying large objects or need to modify the original data, you can pass arguments by reference.
+We used both a **Multilayer Perceptron (MLP)** and a **Decision Tree Classifier** to predict whether the current tick lies in the **lowest 3% ask price** of that minute.
 
-      ```c++
-      void updateValue(int &val) {
-          val += 10;
-      }
-      ```
+To avoid missing trades, we implement a **time-adaptive confidence threshold**:
 
-    * **Constant Reference Passing**: If you only need to read the data without modifying it, you can pass arguments as constant references. This avoids the overhead (开销) of copying while ensuring the data remains unchanged.
+- `0–15s: p > 0.95`
+- `15–30s: p > 0.90`
+- `30–45s: p > 0.85`
+- `45–60s: p > 0.80`
 
-      ```c++
-      void printData(const std::string &data) {
-          std::cout << data << std::endl;
-      }
-      ```
+If no signal is triggered by second 60, a **fallback trade** is placed at current ask.
 
-    * **Function Return Values**: Returning a reference from a function can be useful to avoid copying, especially for large objects. However, you must ensure that the reference does not refer to a **local** variable that goes out of scope.
+---
 
-      ```c++
-      int& getElement(std::vector<int> &vec, size_t index) {
-              return vec[index];
-      }
-      ```
+## 📊 Backtesting Results (AAPL)
+
+- **Average Algo Price**: $584.0644  
+- **TWAP Price**: $584.0826  
+- **Improvement**: –$0.0182 per share  
+- **Hit Rate (lowest price in minute)**: 63.2% (vs. 55.4% baseline)  
+- **Precision/Recall**: Tree = 0.24 / 0.63, MLP = 0.13 / 0.66  
+
+Most executions happened in the **first 15–30 seconds**, validating the effectiveness of our dynamic thresholds.
+
+---
+
+## 🔍 Key Takeaways
+
+- Feature engineering using LOB is powerful even without deep learning
+- Time-dependent thresholds help balance price quality vs. execution certainty
+- Real-time decision-making can beat simple baselines with careful design
+- Our framework is extendable to **sell-side, multi-asset, or cost-sensitive settings**
+
+---
