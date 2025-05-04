@@ -14,6 +14,7 @@ This blog is for testing.
 > 🧠 Written by Binxi Li, Sirui Zhang, and Sheng Zhang @ Cornell Financial Engineering (Spring 2025)
 
 ---
+📄 [Execution Algorithms: A Real-Time ML Approach](https://ellianali.github.io/assets/pdf/Final_BinxiLi_Capstone.pdf)
 
 ## 📘 Project Overview
 
