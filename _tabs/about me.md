@@ -27,9 +27,9 @@ I'm a Financial Engineering master's student at Cornell, passionate about quanti
 
 ### 🌟 Fun Facts
 
-- 🎾 Tennis enthusiast (2.5 level — my backhand is a work in progress!)  
-- 🎷 Jazz music is my coding fuel
-- 📺 I secretly think Blair Waldorf would've made a great quant (Gossip Girl is my guilty pleasure)
-- 🔮 I dabble in tarot reading when I need a sign from the universe  
+- 🎾 I look skinny but a tennis enthusiast (2.5 level — my backhand is a work in progress!)  
+- 🏋️ I never touch my phone at the gym — it's sacred lifting time 💪📵 (also, I love randomly uninstalling social media for a mental detox)  
+- 😊 My dimple on the left cheek isn’t natural — it’s a childhood muscle injury 🤣
+- 🔮 I can read tarot — feel free to reach out for a vibe check on love 💗, career, or those "left or right?" life moments!  
 
-> Let’s connect and collaborate on all things data + finance + design — or just chat about Serena’s plot twists and saxophone solos!
+> Let’s connect and collaborate on all things data + quant — or just chat about Gossip Girl Serena’s plot twists and saxophone solos!
