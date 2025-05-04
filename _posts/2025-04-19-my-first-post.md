@@ -4,7 +4,7 @@ date: 2025-04-19 10:00:00 +0800
 author: EllianaLi
 categories: [Trading]
 pin: true
-tags: [test, c++]
+tags: [ML, Trading]
 ---
 
 This blog is for testing.
@@ -14,7 +14,7 @@ This blog is for testing.
 > 🧠 Written by Binxi Li, Sirui Zhang, and Sheng Zhang @ Cornell Financial Engineering (Spring 2025)
 
 ---
-📄 [Execution Algorithms: A Real-Time ML Approach](https://ellianali.github.io/assets/pdf/Final_BinxiLi_Capstone.pdf)
+📄 [Execution Algorithms: A Real-Time ML Approach](https://ellianali.github.io/assets/pdf/Milestone2.pdf)
 
 ## 📘 Project Overview
 
