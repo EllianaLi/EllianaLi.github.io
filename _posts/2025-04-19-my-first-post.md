@@ -3,7 +3,7 @@ title: "Execution Algorithms: A Real-Time ML Approach"
 date: 2025-04-19 10:00:00 +0800
 author: EllianaLi
 categories: [Trading]
-pin: true
+pin: false
 tags: [ML, Trading]
 ---
 
