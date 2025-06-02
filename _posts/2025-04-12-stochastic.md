@@ -3,7 +3,7 @@ title: "Stochastic Calculus and Derivative Pricing"
 date: 2025-04-12 10:00:00 +0800
 author: EllianaLi
 categories: [Stochastic]
-pin: true
+pin: false
 tags: [stochastic, derivatives]
 ---
 ## 📚 Independent Study: Stochastic Calculus and Derivative Pricing
